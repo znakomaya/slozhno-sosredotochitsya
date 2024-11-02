@@ -4,72 +4,87 @@
   переключая тему
 */
 
-:root.theme_light {
-  /* Переменные светлой темы */
-  --bg-image: url(../images/cover-image-light.png);
-  --bg-color: #fff1f7;
-  --text-color: #353430;
-  --title-color: #ffc2e6;
-  --subtitle-color: #353430;
-  --accent-color: #ff8dcb;
-  --button-color: #353430;
-  --content-title-color: #353430;
-  --shadow-color: #ff8dcb;
-  --line-color: rgba(50 49 45 / 0.4);
-}
-
-/* Остальные стили */
-
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --bg-image: url(../images/cover-image-light.png);
+  --bg-image: url("../images/cover-image-light.png");
   --bg-color: #fff1f7;
+  --accent-bg-color: #ff8dcb;
   --text-color: #353430;
+  --accent-color: #353430;
   --title-color: #ffc2e6;
-  --subtitle-color: #353430;
-  --accent-color: #ff8dcb;
-  --button-color: #353430;
-  --content-title-color: #353430;
+  --accent-title-color: #353430;
   --shadow-color: #ff8dcb;
-  --line-color: rgba(50 49 45 / 0.4);
+  --link-shadow-color: #ff8dcb;
+  --decor-elements-color: #353430;
+  --button-color: #353430;
+  --button-opacity-color: rgba(50, 49, 45, 0.4);
+  --line-height: 130%;
+  --main-font: "IBM Plex mono", sans-serif;
+  --rec-color: hidden;
+  --rec-visability: hidden;
 }
 
-.theme_light .header__record-element {
-  visibility: hidden;
+:root.theme-light {
+  /* Переменные светлой темы */
+  --bg-image: url("../images/cover-image-light.png");
+  --bg-color: #fff1f7;
+  --accent-bg-color: #ff8dcb;
+  --text-color: #353430;
+  --accent-color: #353430;
+  --title-color: #ffc2e6;
+  --accent-title-color: #353430;
+  --shadow-color: #ff8dcb;
+  --link-shadow-color: #ff8dcb;
+  --decor-elements-color: #353430;
+  --button-color: #353430;
+  --button-opacity-color: rgba(50, 49, 45, 0.4);
+  --line-height: 130%;
+  --main-font: "IBM Plex mono", sans-serif;
+  --rec-color: hidden;
+  --rec-visability: hidden;
 }
 
-@media (prefers-color-scheme: light) {
-  .header__record-element {
-    visibility: hidden;
-  }
-}
+/* Остальные стили */
 
 @media (prefers-color-scheme: light) {
   :root {
-    /* Дублируем переменные светлой темы */
-    --bg-image: url(../images/cover-image-light.png);
+    --bg-image: url("../images/cover-image-light.png");
     --bg-color: #fff1f7;
+    --accent-bg-color: #ff8dcb;
     --text-color: #353430;
+    --accent-color: #353430;
     --title-color: #ffc2e6;
-    --subtitle-color: #353430;
-    --accent-color: #ff8dcb;
-    --button-color: #353430;
-    --content-title-color: #353430;
+    --accent-title-color: #353430;
     --shadow-color: #ff8dcb;
-    --line-color: rgba(50 49 45 / 0.4);
+    --link-shadow-color: #ff8dcb;
+    --decor-elements-color: #353430;
+    --button-color: #353430;
+    --button-opacity-color: rgba(50, 49, 45, 0.4);
+    --line-height: 130%;
+    --main-font: "IBM Plex mono", sans-serif;
+    --rec-color: hidden;
+    --rec-visability: hidden;
   }
 }
 
-@media (prefers-color-scheme: light) and (width >= 1024px) {
-  :root {
-    --shadow-color: #ff0070;
-  }
+/* Остальные стили */
+
+.page.theme_light .header__rec {
+  display: none;
 }
 
 @media (width >= 1024px) {
+  :root {
+    --shadow-color: #ff0070;
+  }
+
+  :root.theme-light {
+    --shadow-color: #ff0070;
+  }
+
   .page.theme_light {
     --shadow-color: #ff0070;
   }

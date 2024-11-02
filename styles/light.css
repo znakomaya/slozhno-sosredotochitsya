@@ -1,14 +1,4 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
   --bg-image: url("../images/cover-image-light.png");
   --bg-color: #fff1f7;
   --accent-bg-color: #ff8dcb;
@@ -28,7 +18,6 @@
 }
 
 :root.theme-light {
-  /* Переменные светлой темы */
   --bg-image: url("../images/cover-image-light.png");
   --bg-color: #fff1f7;
   --accent-bg-color: #ff8dcb;
@@ -46,8 +35,6 @@
   --rec-color: hidden;
   --rec-visability: hidden;
 }
-
-/* Остальные стили */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -69,8 +56,6 @@
     --rec-visability: hidden;
   }
 }
-
-/* Остальные стили */
 
 .page.theme_light .header__rec {
   display: none;

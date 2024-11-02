@@ -26,7 +26,6 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  inset-block-start: auto;
   inset-inline-start: auto;
   align-self: end;
   box-sizing: border-box;
@@ -94,7 +93,7 @@
 }
 
 .header__theme-menu-button {
-  min-block-size: 26px; 
+  min-block-size: 26px;
   display: flex;
   border: none;
   text-transform: lowercase;
@@ -136,7 +135,7 @@
 
 .title-decor {
   color: var(--title-decor-color);
-  background-color: var(--accent-color); 
+  background-color: var(--accent-color);
   font-weight: bold;
   font-size: 18px;
   line-height: 130%;
@@ -212,7 +211,7 @@
 }
 
 .footer {
-  block-size: max(100vb, 668px);  
+  min-block-size: 668px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -236,6 +235,15 @@
     --font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
+  .header {
+    padding-inline-end: 0;
+  }
+
+  .header__decorated-element {
+    inset-block-start: 20px;
+    inset-inline-end: 8px;
+  }
+
   .header__title {
     position: relative;
     inset-inline-start: -20px;
@@ -243,6 +251,13 @@
 
   .section {
     flex-direction: row;
+  }
+
+  .article {
+    margin-inline-start: 15px;
+    inline-size: calc(100% * 3 / 3);
+    margin-block-start: 0;
+    margin-block-end: 10px;
   }
 
   .section__title {
@@ -263,6 +278,33 @@
 
   .articles__second-section {
     inline-size: 100%;
+  }
+
+  .title__second-section {
+    margin-block-start: -10px;
+    margin-block-end: 10px;
+  }
+
+  .article__second-section .title-decor {
+    margin-inline-start: -15px;
+  }
+
+  .article__second-section .section__text{
+    margin-inline-start: -15px;
+  }
+
+  .third-section .section__title {
+    margin-block-start: -10px;
+  }
+
+  .header__third-section {
+    inline-size: 472px;
+    margin: -10px 0 8px 18px;
+  }
+
+  .section__gallery {
+    inline-size: 728px;
+    margin-top: -10px;
   }
 
   .gallery {
@@ -302,6 +344,14 @@
   .image__street {
     grid-column: 2 / 4;
     object-fit: contain;
+  }
+
+  .footer {
+    min-block-size: 1024px;
+  }
+
+  .footer__title {
+    margin-inline-start: 10px;
   }
 }
 

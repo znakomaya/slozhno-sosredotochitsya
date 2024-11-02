@@ -33,7 +33,7 @@
   border-width: 1px 1px 0 0;
   border-style: solid;
   border-color: var(--decor-color);
-  padding-block-start: var(--padding);
+  inset-block-start: var(--padding);
 }
 
 .decorated-zone::after {
@@ -75,6 +75,7 @@
 
 .header__theme-menu {
   margin-block-start: 10px;
+  margin-inline-end: 5px;
   color: var(--decor-color);
 }
 
@@ -93,7 +94,7 @@
 }
 
 .header__theme-menu-button {
-  min-block-size: 26px;
+  min-block-size: 26px; 
   display: flex;
   border: none;
   text-transform: lowercase;
@@ -125,6 +126,7 @@
   font-size: var(--font-size);
   line-height: 82.5%;
   text-shadow: 4px 4px 0 var(--accent-color);
+  margin-block-start: 15px;
 }
 
 .header__text {
@@ -134,7 +136,7 @@
 
 .title-decor {
   color: var(--title-decor-color);
-  background-color: var(--accent-color);
+  background-color: var(--accent-color); 
   font-weight: bold;
   font-size: 18px;
   line-height: 130%;
@@ -150,7 +152,7 @@
 .section, .section__content, .article {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .section__title {
@@ -160,12 +162,21 @@
   line-height: 130%;
 }
 
+.article {
+  margin-top: 10px;
+}
+
 .article__point {
   font-weight: normal;
 }
 
 .section__text {
+  font-size: 18px;
   line-height: 130%;
+}
+
+.header__third-section {
+  margin-top: 10px;
 }
 
 .link {
@@ -201,7 +212,7 @@
 }
 
 .footer {
-  block-size: max(100vb, 668px);
+  block-size: max(100vb, 668px);  
   position: relative;
   display: flex;
   flex-direction: column;

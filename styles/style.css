@@ -33,7 +33,7 @@
   border-width: 1px 1px 0 0;
   border-style: solid;
   border-color: var(--decor-color);
-  inset-block-start: var(--padding);
+  padding-block-start: var(--padding);
 }
 
 .decorated-zone::after {
@@ -93,7 +93,7 @@
 }
 
 .header__theme-menu-button {
-  min-block-size: 26px; 
+  min-block-size: 26px;
   display: flex;
   border: none;
   text-transform: lowercase;
@@ -134,7 +134,7 @@
 
 .title-decor {
   color: var(--title-decor-color);
-  background-color: var(--accent-color); 
+  background-color: var(--accent-color);
   font-weight: bold;
   font-size: 18px;
   line-height: 130%;
@@ -201,7 +201,7 @@
 }
 
 .footer {
-  block-size: max(100vb, 668px);  
+  block-size: max(100vb, 668px);
   position: relative;
   display: flex;
   flex-direction: column;

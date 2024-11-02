@@ -1,25 +1,76 @@
-.page.theme_light {
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root.theme_light {
+  /* Переменные светлой темы */
   --bg-image: url(../images/cover-image-light.png);
-  --bg-color: #FFF1F7;
-  --accent-color: #FF8DCB;
-  --header-color: #FFC2E6;
+  --bg-color: #fff1f7;
   --text-color: #353430;
-  --title-decor-color: #353430;
-  --decor-color: #353430;
-  --hover-color: #32312D;
-  --visability: none;
+  --title-color: #ffc2e6;
+  --subtitle-color: #353430;
+  --accent-color: #ff8dcb;
+  --button-color: #353430;
+  --content-title-color: #353430;
+  --shadow-color: #ff8dcb;
+  --line-color: rgba(50 49 45 / 0.4);
+}
+
+/* Остальные стили */
+
+.page.theme_light {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+  --bg-image: url(../images/cover-image-light.png);
+  --bg-color: #fff1f7;
+  --text-color: #353430;
+  --title-color: #ffc2e6;
+  --subtitle-color: #353430;
+  --accent-color: #ff8dcb;
+  --button-color: #353430;
+  --content-title-color: #353430;
+  --shadow-color: #ff8dcb;
+  --line-color: rgba(50 49 45 / 0.4);
+}
+
+.theme_light .header__record-element {
+  visibility: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+  .header__record-element {
+    visibility: hidden;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    /* Дублируем переменные светлой темы */
     --bg-image: url(../images/cover-image-light.png);
-    --bg-color: #FFF1F7;
-    --accent-color: #FF8DCB;
-    --header-color: #FFC2E6;
+    --bg-color: #fff1f7;
     --text-color: #353430;
-    --title-decor-color: #353430;
-    --decor-color: #353430;
-    --hover-color: #32312D;
-    --visability: none;
+    --title-color: #ffc2e6;
+    --subtitle-color: #353430;
+    --accent-color: #ff8dcb;
+    --button-color: #353430;
+    --content-title-color: #353430;
+    --shadow-color: #ff8dcb;
+    --line-color: rgba(50 49 45 / 0.4);
+  }
+}
+
+@media (prefers-color-scheme: light) and (width >= 1024px) {
+  :root {
+    --shadow-color: #ff0070;
+  }
+}
+
+@media (width >= 1024px) {
+  .page.theme_light {
+    --shadow-color: #ff0070;
   }
 }

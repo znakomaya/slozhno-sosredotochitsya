@@ -1,11 +1,42 @@
-.page.theme_dark {
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root.theme_dark {
+  /* Дублируем переменные для тёмной темы */
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
-  --accent-color: #FF0070;
-  --header-color: #DB00FF;
-  --text-color: #F1B2CE;
-  --title-decor-color: #000028;
-  --decor-color: #FF0070;
-  --hover-color: #FF0070;
-  --visability: flex;
+  --text-color: #f1b2ce;
+  --title-color: #db00ff;
+  --subtitle-color: #000028;
+  --accent-color: #ff0070;
+  --button-color: #ff0070;
+  --content-title-color: #ff0070;
+  --shadow-color: #ff0070;
+  --line-color: rgba(255 0 112 / 0.4);
+}
+
+/* Остальные стили */
+
+.page.theme_dark {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --title-color: #db00ff;
+  --subtitle-color: #000028;
+  --accent-color: #ff0070;
+  --button-color: #ff0070;
+  --content-title-color: #ff0070;
+  --shadow-color: #ff0070;
+  --line-color: rgba(255 0 112 / 0.4);
+}
+
+.theme_dark .header__record-element {
+  visibility: visible;
 }

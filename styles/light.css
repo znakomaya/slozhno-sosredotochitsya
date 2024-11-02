@@ -7,7 +7,7 @@
   --title-decor-color: #353430;
   --decor-color: #353430;
   --hover-color: #32312D;
-  --visability: none; 
+  --visability: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -18,7 +18,7 @@
     --header-color: #FFC2E6;
     --text-color: #353430;
     --title-decor-color: #353430;
-    --decor-color: #353430; 
+    --decor-color: #353430;
     --hover-color: #32312D;
     --visability: none;
   }

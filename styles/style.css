@@ -343,6 +343,10 @@
     object-fit: contain;
   }
 
+  .footer {
+    block-size: 100vh;
+  }
+
   .footer__title {
     margin-inline-start: 10px;
   }
